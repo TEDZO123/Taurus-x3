@@ -456,7 +456,7 @@ bosco.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 
         //FAKEREPLY PRODUCT
             const ftoko = {
-                  key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "1650543480919961050829@s.whatsapp.net" } : {})},message: {"productMessage": {"product": {"productImage":{"mimetype": "image/jpeg","jpegThumbnail": fs.readFileSync(`./ds.jpg`)},"title": ` ${fake} `,"description": "hehe", "currencyCode": "US$","priceAmount1000": "9999999999","retailerId": "X - Dev Team","productImageCount": 1},"businessOwnerJid": `0@s.whatsapp.net`}}}
+                  key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "1650543480919961050829@s.whatsapp.net" } : {})},message: {"productMessage": {"product": {"productImage":{"mimetype": "image/jpeg","jpegThumbnail": fs.readFileSync(`./ds.jpg`)},"title": ` ${fake} `,"description": "currencyCode": "US$","priceAmount1000": "9999999999","retailerId": "X - Dev Team","productImageCount": 1},"businessOwnerJid": `0@s.whatsapp.net`}}}
             //FAKE KONTAK
             const fkontak = { 
                   key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `919961050829@s.whatsapp.net` } : {}) }, message: { 'contactMessage': { 'displayName': `${fake}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Its Me taurus\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./ds.jpg')}}}
@@ -474,7 +474,7 @@ bosco.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
                   key: {"fromMe": false,"participant": `919961050829@s.whatsapp.net`, "remoteJid": "6289530863358-1621036495@g.us" },message: { "liveLocationMessage": { "title":`${fake}`,}}}
             //FAKEREPLY TROLI
             const ftroli = {
-                  key:{fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "919961050829@s.whatsapp.net" } : {})},message: {"productMessage": {"product": {"productImage":{"mimetype: "audio/mp4", duration: "99989.0", ptt: true, "jpegThumbnail": fs.readFileSync(`./ds.jpg`)},"title": ` ${fake} `,"description": "${pushname}", "currencyCode": "US$","priceAmount1000": "9999999999","retailerId": "X - Dev Team","productImageCount": 1},"businessOwnerJid": `9961050829@s.whatsapp.net`}}}
+                  key:{fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "1650543480919961050829@s.whatsapp.net" } : {})},message: {"productMessage": {"product": {"product Image","jpegThumbnail": fs.readFileSync(`./ds.jpg`)},"title": ` ${fake} `,"description": "currencyCode": "US$","priceAmount1000": "9999999999","retailerId": "X - Dev Team","productImageCount": 1},"businessOwnerJid": `0@s.whatsapp.net`}}}
             //FAKEREPLY VIDEO
             const fvideo = {
                   key: {fromMe: false,participant: `62895619083555@s.whatsapp.net`, ...(from ? { remoteJid: "1650543480919961050829@s.whatsapp.net" } : {}) },message: { "videoMessage": { "title":"fake","h": `Hmm`,'seconds': '359996400', 'caption': `${fake}`,'jpegThumbnail': fs.readFileSync('./life.jpg')}}}
@@ -3777,4 +3777,5 @@ console.log('[',color('TEXT','teal'),']',`Message : ${budy} From`, color(pushnam
         }
 	}
 }
+
 
