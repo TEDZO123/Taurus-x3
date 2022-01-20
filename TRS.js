@@ -1501,14 +1501,7 @@ wa.me/${owner}`
 					break
          case 'setprefix':
 				prefix = args.join(' ')
-				bosco.updatePresence(from, Presence.composing)
-					if (!isOwner && !mek.key.fromMe) return reply(mess.only.ownerB)
-					anu = await bosco.chats.all()
-					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-					     encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-						buff = await bosco.downloadMediaMessage(encmedia)
-						for (let _ of anu) {
-							bosco.sendMessage(from, `*Succes Changing Prefix : ${prefix}*`, text, {quoted: ftoko, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
+				bosco.sendMessage(from, `*Succes Changing Prefix : ${prefix}*`, text, {quoted: ftoko, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
 				break
          case 'getquoted':
              reply(JSON.stringify(mek.message.extendedTextMessage.contextInfo, null, 3))
