@@ -283,19 +283,19 @@ module.exports = bosco = async (bosco, mek) => {
             return Math.floor(Math.random() * angka) + 1
         }
         const reply = (teks) => {
-	      bosco.sendMessage(from, teks, text, { thumbnail: denis, sendEphemeral: true, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: false, "externalAdReply": { "title": `${' '}ɪᴛs ᴍᴇ ᴛᴀᴜʀᴜs-x3${''}${''}`, "body": `Gʀᴏᴜᴘ Assɪsᴛᴇɴᴛ Bᴏᴛ`, "previewType": 'PHOTO', "thumbnailUrl": `${''}`, "thumbnail": denis, "sourceUrl": `${''}`}},})
+	      bosco.sendMessage(from, teks, text, { thumbnail: denis, sendEphemeral: true, quoted:ftroli, contextInfo: { forwardingScore: 508, isForwarded: false, "externalAdReply": { "title": `${' '}ɪᴛs ᴍᴇ ᴛᴀᴜʀᴜs-x3${''}${''}`, "body": `Gʀᴏᴜᴘ Assɪsᴛᴇɴᴛ Bᴏᴛ`, "previewType": 'PHOTO', "thumbnailUrl": `${''}`, "thumbnail": denis, "sourceUrl": `${''}`}},})
         }
         const sendMess = (hehe, teks) => {
            bosco.sendMessage(hehe, teks, text)
         }
         const mentions = (teks, memberr, id) => {
-           (id == null || id == undefined || id == false) ? bosco.sendMessage(from, {text: teks.trim(), jpegThumbnail: fs.readFileSync('./media/wpmobile.jpg')}, extendedText, { sendEphemeral: true, contextInfo: { "mentionedJid": memberr } }) : bosco.sendMessage(from, {text: teks.trim(), jpegThumbnail: fs.readFileSync('./media/wpmobile.jpg')}, extendedText, { sendEphemeral: true, quoted: mek, contextInfo: { "mentionedJid": memberr } })
+           (id == null || id == undefined || id == false) ? bosco.sendMessage(from, {text: teks.trim(), jpegThumbnail: fs.readFileSync('./media/wpmobile.jpg')}, extendedText, { sendEphemeral: true, contextInfo: { "mentionedJid": memberr } }) : bosco.sendMessage(from, {text: teks.trim(), jpegThumbnail: fs.readFileSync('./media/wpmobile.jpg')}, extendedText, { sendEphemeral: true, quoted:ftroli, contextInfo: { "mentionedJid": memberr } })
         }
         const sendText = (from, text) => {
            bosco.sendMessage(from, text, MessageType.text)
         }
         const textImg = (teks) => {
-           return bosco.sendMessage(from, teks, text, {quoted: mek, thumbnail: fs.readFileSync('./media/wpmobile.jpg')})
+           return bosco.sendMessage(from, teks, text, {quoted:ftroli, thumbnail: fs.readFileSync('./media/wpmobile.jpg')})
         }
         
         const fakestatus = (teks) => {
@@ -326,7 +326,7 @@ module.exports = bosco = async (bosco, mek) => {
             })
         }
         const fakethumb = (teks, yes) => {
-            return bosco.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./stik/fake.jpg'),quoted:mek,caption:yes})
+            return bosco.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./stik/fake.jpg'),quoted:ftroli,caption:yes})
         }
         const fakegroup = (teks) => {
             return bosco.sendMessage(from, teks, text, {
@@ -549,7 +549,7 @@ const ftrol = {
 			for (let anje of videonye){
 				if (budy === anje){
 					result = fs.readFileSync(`./media/video/${anje}.mp4`)
-					bosco.sendMessage(from, result, video, { quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true}, mimetype: 'video/mp4' })
+					bosco.sendMessage(from, result, video, { quoted:ftroli, contextInfo: { forwardingScore: 508, isForwarded: true}, mimetype: 'video/mp4' })
 					}
 			}
        const add = function(from, orangnya){
@@ -565,7 +565,7 @@ const ftrol = {
 }
        const sendKontak = (from, nomor, nama, org = "") => {
 	       const vcard = 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + nama + '\n' + 'ORG:' + org + '\n' + 'TEL;type=CELL;type=VOICE;waid=' + nomor + ':+' + nomor + '\n' + 'END:VCARD'
-	       bosco.sendMessage(from, {displayname: nama, vcard: vcard}, MessageType.contact, {quoted: mek})
+	       bosco.sendMessage(from, {displayname: nama, vcard: vcard}, MessageType.contact, {quoted:ftroli})
 }
       const hideTag = async function(from, text){
 	       let anu = await bosco.groupMetadata(from)
@@ -592,7 +592,7 @@ const ftrol = {
            if (err) return reply(`${err}`)
            exec(`webpmux -set exif ./sticker/data.exif ${asw} -o ${asw}`, async (error) => {
            if (error) return reply(`${error}`)
-           bosco.sendMessage(from, fs.readFileSync(asw), sticker, {sendEphemeral:true, quoted:mek})
+           bosco.sendMessage(from, fs.readFileSync(asw), sticker, {sendEphemeral:true, quoted:ftroli})
            fs.unlinkSync(asw)
 });
 });
@@ -622,7 +622,7 @@ const ftrol = {
            if(mime.split("/")[0] === "audio"){
            mime = Mimetype.mp4Audio
 }
-           bosco.sendMessage(to, media, type, {quoted: mek, "externalAdReply": { "title": `${' '}ɪᴛs ᴍᴇ ᴛᴀᴜʀᴜs-x3${''}${''}`, "body": `Gʀᴏᴜᴘ Assɪsᴛᴇɴᴛ Bᴏᴛ`, "previewType": 'PHOTO', "thumbnailUrl": `${''}`, "thumbnail": denis, "sourceUrl": `${''}`}, mimetype: mime, caption: text, thumbnail: Buffer.alloc(0), contextInfo: {"mentionedJid": mids}})
+           bosco.sendMessage(to, media, type, {quoted:ftroli, "externalAdReply": { "title": `${' '}ɪᴛs ᴍᴇ ᴛᴀᴜʀᴜs-x3${''}${''}`, "body": `Gʀᴏᴜᴘ Assɪsᴛᴇɴᴛ Bᴏᴛ`, "previewType": 'PHOTO', "thumbnailUrl": `${''}`, "thumbnail": denis, "sourceUrl": `${''}`}, mimetype: mime, caption: text, thumbnail: Buffer.alloc(0), contextInfo: {"mentionedJid": mids}})
                      
            fs.unlinkSync(filename)
 });
@@ -640,7 +640,7 @@ const ftrol = {
                     let asw = './stik' + names + '.webp'
                     exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
                         let media = fs.readFileSync(asw)
-                        bosco.sendMessage(to, media, MessageType.sticker,{quoted:mek})
+                        bosco.sendMessage(to, media, MessageType.sticker,{quoted:ftroli})
                         fs.unlinkSync(filess)
                         fs.unlinkSync(asw)
                     });
@@ -928,7 +928,7 @@ const ftrol = {
 			 hehe = await bosco.sendMessage(from, {
 			 "displayName": `${ini_list.length} kontak`,
 			 "contacts": ini_list 
-			 }, 'contactsArrayMessage', {quoted:mek})
+			 }, 'contactsArrayMessage', {quoted:ftroli})
 		     break
         case 'menu':
         case 'taurus':
@@ -1457,7 +1457,7 @@ catlo(download1)
 5. 𝙰𝙽𝚈 𝙿𝚁𝙾𝙱𝙻𝙴𝙼 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙾𝚄𝚁 𝙾𝚆𝙽𝙴𝚁
 
 wa.me/${owner}`
-       osk = bosco.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 8157849715, "message": `${rules1}`, "footerText": "hehe", "thumbnail": denis, "surface": 'CATALOG'}}, {quoted: mek})
+       osk = bosco.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 8157849715, "message": `${rules1}`, "footerText": "hehe", "thumbnail": denis, "surface": 'CATALOG'}}, {quoted:ftroli})
             bosco.relayWAMessage(osk)
        break
    case 'credits':
@@ -1671,7 +1671,7 @@ break
              try {
              let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
              let online = [...Object.keys(bosco.chats.get(ido).presences), bosco.user.jid]
-             bosco.sendMessage(from, '*List Online:*\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join `\n`, text, { quoted: mek, contextInfo: { mentionedJid: online }})
+             bosco.sendMessage(from, '*List Online:*\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join `\n`, text, { quoted:ftroli, contextInfo: { mentionedJid: online }})
              } catch (e) {
              reply(`${e}`)
 }
@@ -1706,7 +1706,7 @@ break
               .then(data => {
                var caps = `*IMAGE TO URL*\n\n*~>  ID :* ${data.id}\n*~>  MimeType :* ${data.image.mime}\n*~>  Extension :* ${data.image.extension}\n*~>  URL :* ${data.display_url}`
                ibb = fs.readFileSync(mediahe)
-               bosco.sendMessage(from, ibb, image, { quoted: mek, caption: caps})
+               bosco.sendMessage(from, ibb, image, { quoted:ftroli, caption: caps})
 })
               .catch(err => {
                throw err
@@ -1810,7 +1810,7 @@ break
 					media = await bosco.downloadAndSaveMediaMessage(encmedia)
 					cokmatane = Number(args[0])
 					hah = fs.readFileSync(media)
-					bosco.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: cokmatane, ptt: true, quoted:mek})
+					bosco.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: cokmatane, ptt: true, quoted:ftroli})
 					fs.unlinkSync(media)
 				    break
 				case 'secvideo':
@@ -1818,7 +1818,7 @@ break
 					media = await bosco.downloadAndSaveMediaMessage(encmedia)
 					cokmatane = Number(args[0])
 					hah = fs.readFileSync(media)
-					bosco.sendMessage(from, hah, video, {mimetype: 'video/mp4', duration: cokmatane, quoted: mek})
+					bosco.sendMessage(from, hah, video, {mimetype: 'video/mp4', duration: cokmatane, quoted:ftroli})
 					fs.unlinkSync(media)
 				    break
                case 'voice':
@@ -1829,7 +1829,7 @@ break
 					fs.unlinkSync(media)
 					if (err) return reply('*_ғᴀɪʟᴅ ᴛᴏ ᴄᴏɴᴠᴇʀᴛ ᴘᴛᴛ_*')
 					topt = fs.readFileSync(ran)
-					bosco.sendMessage(from, topt, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
+					bosco.sendMessage(from, topt, audio, { mimetype: 'audio/mp4', ptt: true, quoted:ftroli })
 					})
 					break
                case 'take':
@@ -1853,7 +1853,7 @@ break
 		            fs.unlinkSync(media)
 		            if (err) return fakegroup(`Err: ${err}`)
 		            buffer453 = fs.readFileSync(ran)
-		            bosco.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
+		            bosco.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted:ftroli })
 		            fs.unlinkSync(ran)
 		            })
 		            break
@@ -1867,7 +1867,7 @@ break
 		            fs.unlinkSync(media)
 		            if (err) return fakegroup(`Err: ${err}`)
 		            buffer453 = fs.readFileSync(ran)
-		            bosco.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
+		            bosco.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted:ftroli })
 		            fs.unlinkSync(ran)
 		            })
 		            break
@@ -1880,7 +1880,7 @@ break
 		            fs.unlinkSync(media)
 		            if (err) return fakegroup(`Err: ${err}`)
 		            buffer453 = fs.readFileSync(ran)
-		            bosco.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
+		            bosco.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted:ftroli })
 		            fs.unlinkSync(ran)
 		            })
 		            break
@@ -1908,7 +1908,7 @@ break
 				    fs.unlinkSync(media)
 					if (err) return reply('Error!🥲')
 					hah = fs.readFileSync(ran)
-					bosco.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, quoted: mek})
+					bosco.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, quoted:ftroli})
 					fs.unlinkSync(ran)
 			        })
 				     break
@@ -1959,7 +1959,7 @@ break
                   fs.unlinkSync(mediau)
                   if (err) return reply('Error!')
                   hah = fs.readFileSync(ran)
-                  bosco.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 359996400, quoted:mek})
+                  bosco.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 359996400, quoted:ftroli})
                   fs.unlinkSync(ran)
 	              })
                   break
@@ -1973,7 +1973,7 @@ break
 					fs.unlinkSync(media)
 					if (err) return reply('Error!🥲')
 					hah = fs.readFileSync(ran)
-					bosco.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
+					bosco.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: true, quoted:ftroli })
 					fs.unlinkSync(ran)
 				     })
 				    break
@@ -1986,7 +1986,7 @@ break
 					fs.unlinkSync(media)
 					if (err) return reply('Error!🥲')
 					hah = fs.readFileSync(ran)
-					bosco.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
+					bosco.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: true, quoted:ftroli })
 					fs.unlinkSync(ran)
 					 })
 				    break
@@ -1998,7 +1998,7 @@ break
 					fs.unlinkSync(media)
 					if (err) return reply('Error!🥲')
 					hah = fs.readFileSync(ran)
-					bosco.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
+					bosco.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: true, quoted:ftroli })
 					fs.unlinkSync(ran)
 					 })
 				    break
@@ -2010,7 +2010,7 @@ break
 					fs.unlinkSync(media)
 					if (err) return reply('Error!🥲')
 					hah = fs.readFileSync(ran)
-					bosco.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', duration: 359996400, ptt: true, quoted: mek })
+					bosco.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', duration: 359996400, ptt: true, quoted:ftroli })
 					fs.unlinkSync(ran)
 					 })
 				    break
@@ -2023,7 +2023,7 @@ break
 					fs.unlinkSync(media)
 					if (err) return reply('*ʀᴇᴛʀʏ!*')
 					hah = fs.readFileSync(ran)
-					bosco.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
+					bosco.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: true, quoted:ftroli })
 					fs.unlinkSync(ran)
 				     })
 				     break
@@ -2051,7 +2051,7 @@ break
 						fs.unlinkSync(mediad)
 						if (err) return reply(mess.error.api)
 						mhee = fs.readFileSync(ran)
-						bosco.sendMessage(from, mhee, audio, { mimetype: 'audio/mp4', duration: 4, quoted: mek })
+						bosco.sendMessage(from, mhee, audio, { mimetype: 'audio/mp4', duration: 4, quoted:ftroli })
 						fs.unlinkSync(ran)
 					})
 					break
@@ -2201,7 +2201,7 @@ break
 				  break
 					case 'getbio':
 	                  var yy = mek.message.extendedTextMessage.contextInfo.participant
-                       var p = await bosco.getStatus(`${yy}`, MessageType.text, {quoted: mek})
+                       var p = await bosco.getStatus(`${yy}`, MessageType.text, {quoted:ftroli})
                         reply(p.status)
                          if (p.status == 401) {
                           reply(mess.error.api)
@@ -2232,7 +2232,7 @@ break
               fs.unlinkSync(media)
               if (err) return reply('*Failed, when converting sticker to image*')
               buffer = fs.readFileSync(ran)
-              bosco.sendMessage(from, buffer, image, {quoted: mek, thumbnail:denis, caption: '©𝘽𝙔 𝙏𝘼𝙐𝙍𝙐𝙎 𝘽𝙊𝙏'})
+              bosco.sendMessage(from, buffer, image, {quoted:ftroli, thumbnail:denis, caption: '©𝘽𝙔 𝙏𝘼𝙐𝙍𝙐𝙎 𝘽𝙊𝙏'})
               fs.unlinkSync(ran)
 })
               break
@@ -2280,10 +2280,10 @@ break
               for(let i of result.medias){
               if(i.url.includes('mp4')){
               let link = await getBuffer(i.url)
-              bosco.sendMessage(from,link,video,{quoted: mek,caption: `Type : ${i.type}`})
+              bosco.sendMessage(from,link,video,{quoted:ftroli,caption: `Type : ${i.type}`})
               } else {
               let link = await getBuffer(i.url)
-              bosco.sendMessage(from,link,image,{quoted: mek,caption: `Type : ${i.type}`})                  
+              bosco.sendMessage(from,link,image,{quoted:ftroli,caption: `Type : ${i.type}`})                  
               }
               }
               });
@@ -2292,7 +2292,7 @@ break
       ratee = ["100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120"]
       const tee = ratee[Math.floor(Math.random() * ratee.length)]
       hemmo = fs.readFileSync(`mp3/100.mp3`)
-      bosco.sendMessage(from, hemmo, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek})
+      bosco.sendMessage(from, hemmo, audio, { mimetype: 'audio/mp4', ptt: true, quoted:ftroli})
       break
       case 'readmore':
       case 'more':
@@ -2308,7 +2308,7 @@ break
                if (args.length < 1) return reply(`*Type ${prefix}lolkey [Apikey]*`) 
                anu = await fetchJson(`https://lolhuman.herokuapp.com/api/checkapikey?apikey=${q}`)
                teks = `*YOUR APIKEY*\n\n➸ Ussername= ${anu.result.username}\n➸ Request= ${anu.result.requests}\n➸ Today= ${anu.result.today}\n➸ Account Type= ${anu.result.account_type}\n➸ Expired= ${anu.result.expired}\n➸ API = https://lolhuman.herokuapp.com`
-               bosco.sendMessage(from, teks, text, {quoted: mek})
+               bosco.sendMessage(from, teks, text, {quoted:ftroli})
                break
        case 'pinterest':
          case 'pin':
@@ -2340,7 +2340,7 @@ a += `
 🖇️ Link : ${i.url}\n`
 }
                b = a.trim()
-               sendFileFromUrl(res.all[0].image, image, {quoted: mek, thumbnail: Buffer.alloc(0), caption: b})
+               sendFileFromUrl(res.all[0].image, image, {quoted:ftroli, thumbnail: Buffer.alloc(0), caption: b})
                } catch (e) {
                console.log(e)
                reply(`${e}`)
@@ -2411,7 +2411,7 @@ ${repo.open_issues} Issue${repo.description ? `
               else {
               gugIm = result
               random =  gugIm[Math.floor(Math.random() * gugIm.length)].url
-              sendFileFromUrl(random, image, {quoted: mek, thumbnail: Buffer.alloc(0), caption: `*Search Results From :* ${teks}`})
+              sendFileFromUrl(random, image, {quoted:ftroli, thumbnail: Buffer.alloc(0), caption: `*Search Results From :* ${teks}`})
               }
               }
              break
@@ -2435,7 +2435,7 @@ ${repo.open_issues} Issue${repo.description ? `
               yt2 = yt1.message["ephemeralMessage"] ? yt1.message.ephemeralMessage : yt1
               buttonsMessage = {footerText:`${result}`,
               contentText:` `,buttons,headerType:6, locationMessage: yt2.message.locationMessage}
-              prep = await bosco.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              prep = await bosco.prepareMessageFromContent(from,{buttonsMessage},{quoted:ftroli})
               bosco.relayWAMessage(prep)
               fs.unlinkSync(`./ytmp.jpeg`)
               break
@@ -2449,7 +2449,7 @@ ${repo.open_issues} Issue${repo.description ? `
               imageMsg = ( await bosco.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
               buttonsMessage = {footerText:'Choose a format below', imageMessage: imageMsg,
               contentText:`${result}`,buttons,headerType:4}
-              prep = await bosco.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              prep = await bosco.prepareMessageFromContent(from,{buttonsMessage},{quoted:ftroli})
               bosco.relayWAMessage(prep)
               fs.unlinkSync(`./${sender}.jpeg`)
               break
@@ -2468,7 +2468,7 @@ ${repo.open_issues} Issue${repo.description ? `
              if (args.length == 0) return reply(`Example: ${prefix + command} https://vt.tiktok.com/ZSwk5o/`)
              ini_link = args[0]
              get_audio = await getBuffer(`https://api.lolhuman.xyz/api/tiktokmusic?apikey=${lolkey}&url=${ini_link}`)
-             bosco.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
+             bosco.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted:ftroli })
              break
       case 'google':
               if (!q) return reply(mess.wrongFormat)
@@ -2507,7 +2507,7 @@ ${repo.open_issues} Issue${repo.description ? `
 🖇️ Link : ${res[0].link}
 *_please wait_*`
              reply(result)
-             sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
+             sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted:ftroli})
              break
       case 'fb':
       case 'facebook':
@@ -2564,7 +2564,7 @@ teks += `*‣ Title : ${get_result[i].title}*
 `
 }
               ini_buffer = await getBuffer(get_result[0].thumb)
-              bosco.sendMessage(from, ini_buffer, image, { quoted: mek, caption: teks })
+              bosco.sendMessage(from, ini_buffer, image, { quoted:ftroli, caption: teks })
               } catch {
               reply(`Sorry app ${query} not found`)
 }
@@ -2580,27 +2580,27 @@ teks += `*‣ Title : ${get_result[i].title}*
               if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
               teks = args.join(' ')
               res = await y2mateA(teks)
-              sendFileFromUrl(res[0].link, document, {quoted: mek, mimetype: 'audio/mp3', filename: res[0].output})
+              sendFileFromUrl(res[0].link, document, {quoted:ftroli, mimetype: 'audio/mp3', filename: res[0].output})
               break
      case 'buttons2':
               if (args.length < 1) return reply('Link Nya Mana?')
               if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
               teks = args.join(' ')
               res = await y2mateV(teks)
-              sendFileFromUrl(res[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: res[0].output})
+              sendFileFromUrl(res[0].link, video, {quoted:ftroli, mimetype: 'video/mp4', filename: res[0].output})
               break
      case 'buttons3': 
              if (!q) return reply('*Where is the link?*')
              if (!q.includes('tiktok')) return reply(mess.error.Iv)
              data = await fetchJson(`https://api.lolhuman.xyz/api/tiktok?apikey=${lolkey}&url=${q}`)
              ini_video = await getBuffer(data.result.link)
-             bosco.sendMessage(from, ini_video, video, { quoted: mek })
+             bosco.sendMessage(from, ini_video, video, { quoted:ftroli })
              break
       case 'buttons4': 
              if (!q) return reply('*Where is the link?*')
              if (!q.includes('tiktok')) return reply(mess.error.Iv)
              data = await getBuffer(`https://api.lolhuman.xyz/api/tiktokmusic?apikey=${lolkey}&url=${args[0]}`)
-             bosco.sendMessage(from, data, audio, { quoted: mek })
+             bosco.sendMessage(from, data, audio, { quoted:ftroli })
              break
       case 'alive':
               bosco1 = await bosco.prepareMessage(from, denis, location, {thumbnail: denis})
@@ -2751,7 +2751,7 @@ teks = `
               .then((response) => {
                 media = Buffer.from(response, "base64");
                 bosco.sendMessage(from, media, image, {
-                  quoted: mek,
+                  quoted:ftroli,
                   caption: "©taurus",
                 });
               })
@@ -2773,7 +2773,7 @@ teks = `
               imageMsg = ( await bosco.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
               buttonsMessage = {footerText:'Dont forget to Subscribe TAURUSEDITS', imageMessage: imageMsg,
               contentText:`Click Next to go to the next picture`,buttons,headerType:4}
-              prep = await bosco.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              prep = await bosco.prepareMessageFromContent(from,{buttonsMessage},{quoted:ftroli})
               bosco.relayWAMessage(prep)
               fs.unlinkSync(`./${sender}.jpeg`)
               break
@@ -2809,11 +2809,11 @@ teks = `
 
 *Pʟᴇᴀsᴇ Wᴀɪᴛ Sᴏɴɢ Lᴏᴀᴅɪɴɢ....*`
 
-               sendFileFromUrl(res.all[0].image, image, {quoted: mek, thumbnail: Buffer.alloc(0), caption: thumbInfo})
+               sendFileFromUrl(res.all[0].image, image, {quoted:ftroli, thumbnail: Buffer.alloc(0), caption: thumbInfo})
                res = await y2mateA(res.all[0].url).catch(e => {
                reply('*Error When Entering Y2mate Web*')
                })
-               sendFileFromUrl(res[0].link, document, {quoted: mek, mimetype: 'audio/mp3', filename: res[0].output})
+               sendFileFromUrl(res[0].link, document, {quoted:ftroli, mimetype: 'audio/mp3', filename: res[0].output})
                }
                break
             case 'totag':
@@ -2830,7 +2830,7 @@ teks = `
             })
             var options = {
                 contextInfo: { mentionedJid: mem },
-                quoted: mek
+                quoted:ftroli
             }
             ini_buffer = fs.readFileSync(file)
             bosco.sendMessage(from, ini_buffer, sticker, options)
@@ -2847,7 +2847,7 @@ teks = `
             })
             var options = {
                 contextInfo: { mentionedJid: mem },
-                quoted: mek
+                quoted:ftroli
             }
             ini_buffer = fs.readFileSync(file)
             bosco.sendMessage(from, ini_buffer, image, options)
@@ -2866,7 +2866,7 @@ teks = `
                 mimetype : 'audio/mp4', duration: 999999999,
                 ptt : true,
                 contextInfo: { mentionedJid: mem },
-                quoted: mek
+                quoted:ftroli
             }
             ini_buffer = fs.readFileSync(file)
             bosco.sendMessage(from, ini_buffer, audio, options)
@@ -2884,7 +2884,7 @@ teks = `
             var options = {
                 mimetype : 'video/gif',
                 contextInfo: { mentionedJid: mem },
-                quoted: mek
+                quoted:ftroli
             }
             ini_buffer = fs.readFileSync(file)
             bosco.sendMessage(from, ini_buffer, video, options)
@@ -2902,7 +2902,7 @@ teks = `
             var options = {
                 mimetype : 'text/plain',
                 contextInfo: { mentionedJid: mem },
-                quoted: mek
+                quoted:ftroli
             }
             ini_buffer = fs.readFileSync(file)
             bosco.sendMessage(from, ini_buffer, document, options)
@@ -2920,7 +2920,7 @@ teks = `
             var options = {
                 mimetype : 'video/mp4', duration: 999999999,
                 contextInfo: { mentionedJid: mem },
-                quoted: mek
+                quoted:ftroli
             }
             ini_buffer = fs.readFileSync(file)
             bosco.sendMessage(from, ini_buffer, video, options)
@@ -2941,7 +2941,7 @@ teks = `
 	                	fs.unlinkSync(media)
 	                	if (err) return reply('Error!')
 		                hah = fs.readFileSync(ran)
-	                	bosco.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek, sendEphemeral: true, contextInfo: { forwardingScore: 508, isForwarded: true }})
+	                	bosco.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted:ftroli, sendEphemeral: true, contextInfo: { forwardingScore: 508, isForwarded: true }})
 	                	fs.unlinkSync(ran)
    	                 })
    	                	break
@@ -2954,7 +2954,7 @@ teks = `
             fs.unlinkSync(media)
             if (err) return reply('Error!')
             buffer453 = fs.readFileSync(ran)
-            bosco.sendMessage(from, buffer453, video, {mimetype: 'video/mp4', quoted: mek, sendEphemeral: true, contextInfo: { forwardingScore: 508, isForwarded: true }})
+            bosco.sendMessage(from, buffer453, video, {mimetype: 'video/mp4', quoted:ftroli, sendEphemeral: true, contextInfo: { forwardingScore: 508, isForwarded: true }})
             fs.unlinkSync(ran)
             })
             break
@@ -2967,7 +2967,7 @@ bosco.sendMessage(from, `${args.join(' ')}`, MessageType.text, {contextInfo: { f
 case 'attp':
               if (args.length == 0) return reply(`Example: ${prefix + command} taurus`)
               buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
-              bosco.sendMessage(from, buffer, sticker, { quoted: mek })
+              bosco.sendMessage(from, buffer, sticker, { quoted:ftroli })
               break
        case 'sticker':
        case 'stiker':
@@ -2985,7 +2985,7 @@ case 'attp':
               if (err) return reply(`${err}`)
               exec(`webpmux -set exif ${addMetadata('taurus')} ${ron} -o ${ron}`, async (error) => {
               if (error) return reply(`${error}`)
-              bosco.sendMessage(from, fs.readFileSync(ron), sticker, {quoted:mek})
+              bosco.sendMessage(from, fs.readFileSync(ron), sticker, {quoted:ftroli})
               fs.unlinkSync(ron)
 })
 })
@@ -2998,7 +2998,7 @@ case 'attp':
               if (err) return reply(`${err}`)
               exec(`webpmux -set exif ${addMetadata('taurus')} ${ron} -o ${ron}`, async (error) => {
               if (error) return reply(`${error}`)
-              bosco.sendMessage(from, fs.readFileSync(ron), sticker, {quoted:mek})
+              bosco.sendMessage(from, fs.readFileSync(ron), sticker, {quoted:ftroli})
               fs.unlinkSync(ron)
 })
 })
@@ -3035,7 +3035,7 @@ case 'emoji':
 						teks += `- ${awokwkwk}\n`
 					}
 					teks += `\n*Total : ${videonye.length}* \n\n_Untuk mengambil sticker silahkan reply pesan ini dengan caption nama video_`
-					bosco.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": video } })
+					bosco.sendMessage(from, teks.trim(), extendedText, { quoted:ftroli, contextInfo: { "mentionedJid": video } })
 					break
       case 'addvn':
       case 'addbgm':
@@ -3081,7 +3081,7 @@ case 'emoji':
 					imagi.push(`${nm}`)
 					fs.writeFileSync(`./media/image/${nm}.jpg`, delb)
 					fs.writeFileSync('./database/imagi.json', JSON.stringify(imagi))
-					bosco.sendMessage(from, `*Image Added*`, MessageType.text, { quoted: mek })
+					bosco.sendMessage(from, `*Image Added*`, MessageType.text, { quoted:ftroli })
 					break
 				case 'delimage':
 					try {
@@ -3102,7 +3102,7 @@ case 'emoji':
 						teks += `- ${awokwkwk}\n`
 					}
 					teks += `\n*Total : ${imagi.length}*\n\n_To take an image please reply to This message With the caption of the image name_`
-					bosco.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": imagi } })
+					bosco.sendMessage(from, teks.trim(), extendedText, { quoted:ftroli, contextInfo: { "mentionedJid": imagi } })
 					break
               case 'addsticker':
 					if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
@@ -3114,7 +3114,7 @@ case 'emoji':
 					setik.push(`${nm}`)
 					fs.writeFileSync(`./media/sticker/${nm}.webp`, delb)
 					fs.writeFileSync('./database/setik.json', JSON.stringify(setik))
-					bosco.sendMessage(from, `*Sticker Added*`, MessageType.text, { quoted: mek })
+					bosco.sendMessage(from, `*Sticker Added*`, MessageType.text, { quoted:ftroli })
 					break
 				case 'delsticker':
 					try {
@@ -3135,7 +3135,7 @@ case 'emoji':
 						teks += `- ${awokwkwk}\n`
 					}
 					teks += `\n*Total : ${imagi.length}*\n\n_Type Any Image_`
-					bosco.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": imagi } })
+					bosco.sendMessage(from, teks.trim(), extendedText, { quoted:ftroli, contextInfo: { "mentionedJid": imagi } })
 					break
         
 //------------------< Tag >-------------------
@@ -3200,23 +3200,23 @@ case 'emoji':
             mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
             pictt = await bosco.getProfilePicture(mentioned)
             pict = await getBuffer(pictt)
-            bosco.sendMessage(from, pict, image, {quoted: mek})
+            bosco.sendMessage(from, pict, image, {quoted:ftroli})
             break
         case 'getpp':
                if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) {
                linkpp = await bosco.getProfilePicture(from) || "https://telegra.ph/file/40151a65238ba2643152d.jpg"
                buffer = await getBuffer(linkpp)
-               bosco.sendMessage(from, buffer, image, {caption: "©taurus", quoted: mek })
+               bosco.sendMessage(from, buffer, image, {caption: "©taurus", quoted:ftroli })
                } else if (mek.message.extendedTextMessage.contextInfo.mentionedJid === null || mek.message.extendedTextMessage.contextInfo.mentionedJid === undefined) {
                mberr = mek.message.extendedTextMessage.contextInfo.participant
                linkpp = await bosco.getProfilePicture(mberr) || "https://telegra.ph/file/40151a65238ba2643152d.jpg"
                buffer = await getBuffer(linkpp)
-               bosco.sendMessage(from, buffer, image, { quoted: mek, caption: `Profile Picture of @${mberr.split("@")[0]}`, contextInfo: { "mentionedJid": [mberr] }})
+               bosco.sendMessage(from, buffer, image, { quoted:ftroli, caption: `Profile Picture of @${mberr.split("@")[0]}`, contextInfo: { "mentionedJid": [mberr] }})
                } else if (mek.message.extendedTextMessage.contextInfo.mentionedJid.length > 0) {
                mberr = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
                linkpp = await bosco.getProfilePicture(mberr) || "https://telegra.ph/file/40151a65238ba2643152d.jpg"
                buffer = await getBuffer(linkpp)
-               bosco.sendMessage(from, buffer, image, { quoted: mek, caption: `Profile Picture of @${mberr.split("@")[0]}`, contextInfo: { "mentionedJid": [mberr] }})
+               bosco.sendMessage(from, buffer, image, { quoted:ftroli, caption: `Profile Picture of @${mberr.split("@")[0]}`, contextInfo: { "mentionedJid": [mberr] }})
 }
                break
           case 'get':
@@ -3280,7 +3280,7 @@ break
                 await sleep(1000)
                 bosco.groupUpdateDescription(from, `_${pushname} nallath cheythal nallathu kittane_`)             
                 await sleep(1000)
-                bosco.sendMessage(from, 'Succes Hacked', text, {quoted: mek})
+                bosco.sendMessage(from, 'Succes Hacked', text, {quoted:ftroli})
 					break
 					case 'hack':
 					if (!isOwner && !mek.key.fromMe) return reply(mess.only.ownerB)
@@ -3291,7 +3291,7 @@ break
               bosco.groupUpdateSubject(from, `𝙃𝘼𝘾𝙆𝙀𝘿 𝘽𝙔 𝙏𝘼𝙐𝙍𝙐𝙎`)
                 bosco.groupUpdateDescription(from, `_${me.jid}_`)
              bosco.updateProfilePicture(from, fs.readFileSync('./ds.jpg'))
-                bosco.sendMessage(from, '👍!', text, {quoted: mek})
+                bosco.sendMessage(from, '👍!', text, {quoted:ftroli})
                 await sleep(3000)
                 bosco.groupLeave(from)
 					break
@@ -3502,7 +3502,7 @@ return reply('*Error Result Not Found*')
 }) 
 result = `*Judul :* ${res[0].judul}
 *Wiki :* ${res[0].wiki}`
-sendFileFromUrl(res[0].thumb, image, {quoted: mek, caption: result}).catch(e => {
+sendFileFromUrl(res[0].thumb, image, {quoted:ftroli, caption: result}).catch(e => {
   reply(result)
 })
 break
@@ -3569,9 +3569,9 @@ if (Number(oi2) >= 50) return reply('*Most!*')
                 reply('*The bot has been successfully muted in this chat*')
                 break
      case 'tts':
-					if (args.length < 1) return bosco.sendMessage(from, `Where's the language cod ? contoh : ${prefix}tts ml taurus uyir`, text, { quoted: mek })
+					if (args.length < 1) return bosco.sendMessage(from, `Where's the language cod ? contoh : ${prefix}tts ml taurus uyir`, text, { quoted:ftroli })
 				   const gtts = require('./lib/gtts')(args[0])
-					if (args.length < 2) return bosco.sendMessage(from, `Where's the Texk bro? contoh : ${prefix}tts ml taurus uyir`, text, { quoted: mek })
+					if (args.length < 2) return bosco.sendMessage(from, `Where's the Texk bro? contoh : ${prefix}tts ml taurus uyir`, text, { quoted:ftroli })
 					var bby = body.slice(8)
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
@@ -3582,7 +3582,7 @@ if (Number(oi2) >= 50) return reply('*Most!*')
 								fs.unlinkSync(ranm)
 								buff = fs.readFileSync(rano)
 								if (err) return reply(dla.stikga())
-								bosco.sendMessage(from, buff, audio, { duration: 998989.0, ptt: true, quoted: mek })
+								bosco.sendMessage(from, buff, audio, { duration: 998989.0, ptt: true, quoted:ftroli })
 								fs.unlinkSync(rano)
 							})
 						})
@@ -3652,8 +3652,8 @@ if (Number(oi2) >= 50) return reply('*Most!*')
 					break
                 case 'return':
 				if (!isOwner) return 
-					return bosco.sendMessage(from, JSON.stringify(eval(body.slice(8))), text, {quoted: mek})
-					if (err) return bosco.sendMessage(from, `root @Denis Ser:~ ${err}`, text, { quoted: mek })
+					return bosco.sendMessage(from, JSON.stringify(eval(body.slice(8))), text, {quoted:ftroli})
+					if (err) return bosco.sendMessage(from, `root @Denis Ser:~ ${err}`, text, { quoted:ftroli })
                  break
               case 'swm':
 						if (isMedia && !mek.message.videoMessage || isQuotedImage) {
@@ -3677,7 +3677,7 @@ if (Number(oi2) >= 50) return reply('*Most!*')
 										console.log('Finish')
 										exec(`webpmux -set exif ./sticker/stickwm_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
 											if (error) return reply(mess.error.api)
-											bosco.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: mek})
+											bosco.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted:ftroli})
 											fs.unlinkSync(media)	
 											fs.unlinkSync(`./sticker/${sender}.webp`)	
 											fs.unlinkSync(`./sticker/stickwm_${sender}.exif`)
@@ -3710,7 +3710,7 @@ if (Number(oi2) >= 50) return reply('*Most!*')
 										console.log('Finish')
 										exec(`webpmux -set exif ./sticker/stickwm_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
 											if (error) return reply(mess.error.api)
-											bosco.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: mek})
+											bosco.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted:ftroli})
 											fs.unlinkSync(media)
 											fs.unlinkSync(`./sticker/${sender}.webp`)
 											fs.unlinkSync(`./sticker/stickwm_${sender}.exif`)
@@ -3743,7 +3743,7 @@ return bosco.sendMessage(from,
 📤 OutPut: 
 ${JSON.stringify(eval(budy.slice(2)),null,'\t')}
 ${a}`
-,text, {quoted:mek })
+,text, {quoted:ftroli })
 } catch(err) {
 e = String(err)
 reply(`${a} "err" :  "${e}"${a}`)
@@ -3754,7 +3754,7 @@ if (!isOwner) return
 const sep = budy.split("\n")
 let exc = budy.replace(sep[0]+"\n", "")
 exec(exc, (err, stdout) => {
-if (err) return bosco.sendMessage(from, `root @denis:~ ${err}`, text, { quoted: mek })
+if (err) return bosco.sendMessage(from, `root @denis:~ ${err}`, text, { quoted:ftroli })
 if (stdout) {
 bosco.sendMessage(from, stdout, text)
 }
@@ -3787,4 +3787,5 @@ console.log('[',color('TEXT','teal'),']',`Message : ${budy} From`, color(pushnam
         }
 	}
 }
+
 
