@@ -475,6 +475,9 @@ bosco.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
             //FAKEREPLY TROLI
             const ftroli = {
                   key: {participant: "0@s.whatsapp.net", ...(from ? { groupJid: "120363042182512544@g.us" } : {})},message: { "orderMessage": { "itemCount" : '2021', "status": '1', "surface": '1', "message": `${fake}`, "orderTitle": 'Bang', "thumbnail": denis, "sellerJid": '0@s.whatsapp.net'}}}
+            //FAKECATLOG TROLI
+            const ftaurus = {
+                  key: {participant: "0918792928070@s.whatsapp.net", ...(from ? { groupJid: "120363042182512544@g.us" } : {})},message: { "orderMessage": { "itemCount" : '2021', "status": '1', "surface": '1', "message": `${fake}`, "orderTitle": 'Bang', "thumbnail": denis, "sellerJid": '0918792928070@s.whatsapp.net'}}}
             //FAKEREPLY VIDEO
             const fvideo = {
                   key: {fromMe: false,participant: `62895619083555@s.whatsapp.net`, ...(from ? { remoteJid: "0@s.whatsapp.net" } : {}) },message: { "videoMessage": { "title":"fake","h": `Hmm`,'seconds': '359996400', 'caption': `${fake}`,'jpegThumbnail': fs.readFileSync('./life.jpg')}}}
@@ -1500,6 +1503,7 @@ wa.me/${owner}`
 					reply('*done👍*')
 					break
          case 'setprefix':
+                if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
 				prefix = args.join(' ')
 				bosco.sendMessage(from, `*Succes Changing Prefix : ${prefix}*`, text, {quoted: ftoko, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
 				break
@@ -1508,7 +1512,9 @@ wa.me/${owner}`
              break
          case 'gc':
        case 'group':
-        rows = [
+          if (!isGroup) return reply('this feature is only for groups')
+	      if (!isGroupAdmins) return reply('only admin can use this feature')
+           rows = [
            {title: 'open', description: "", rowId: `OPEN`},
            {title: 'close', description: "", rowId: `CLOSE`},
            {title: 'on', description: "", rowId: `on`},
@@ -1638,6 +1644,7 @@ break
              break
       case 'leaveme':
               if (!isGroup) return reply(mess.only.group)
+              if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
               setTimeout( () => {
               bosco.groupLeave(from) 
               }, 2000)
@@ -1757,7 +1764,7 @@ break
              hideTag(from, `${q}`)
 }
              break
-       case 'taurus':
+       case 'killadi':
               if (!q) return
               qq = q.toUpperCase()
               awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, taurus Poli Ahn ${qq} taurus Killadi Ahnu ${qq} AAAAAAAAH ~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~ AAAAAH ${qq} keluar pertama kali di anime juga manis ❤️ ❤️ ❤️ banget AAAAAAAAH ${qq} AAAAA LUCCUUUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️apa ? ${qq} itu gak nyata ? Cuma HALU katamu ? nggak, ngak ngak ngak ngak NGAAAAAAAAK GUA GAK PERCAYA ITU DIA NYATA NGAAAAAAAAAAAAAAAAAK PEDULI BANGSAAAAAT !! GUA GAK PEDULI SAMA KENYATAAN POKOKNYA GAK PEDULI. ❤️ ❤️ ❤️ ${qq} gw ... ${qq} di laptop ngeliatin gw, ${qq} .. kamu percaya sama aku ? aaaaaaaaaaah syukur ${q} aku gak mau merelakan ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH GUA MASIH PUNYA ${qq} SENDIRI PUN NGGAK SAMA AAAAAAAAAAAAAAH`
