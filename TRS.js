@@ -3039,7 +3039,8 @@ case 'emoji':
 					break
       case 'addvn':
       case 'addbgm':
-					if (!isQuotedAudio) return reply('*Audiokk Reply chyy*')
+					if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
+                    if (!isQuotedAudio) return reply('*Audiokk Reply chyy*')
 					nm = body.slice(7)
 					if (!nm) return reply('*Bgm name ntha?*')
 					boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
@@ -3104,7 +3105,8 @@ case 'emoji':
 					bosco.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": imagi } })
 					break
               case 'addsticker':
-					if (!isQuotedSticker) return reply('*Reply To Sticker*')
+					if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
+                    if (!isQuotedSticker) return reply('*Reply To Sticker*')
 					nm = body.slice(12)
 					if (!nm) return reply('*Sticker Name ntha?*')
 					boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
@@ -3785,5 +3787,4 @@ console.log('[',color('TEXT','teal'),']',`Message : ${budy} From`, color(pushnam
         }
 	}
 }
-
 
