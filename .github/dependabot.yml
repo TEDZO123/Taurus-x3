@@ -1,6 +1,0 @@
-version: 2
-updates: npm
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/package.json"
-    schedule:
-      interval: "daily"
