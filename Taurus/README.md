@@ -20,7 +20,7 @@
 
 <div align=center>
 
-[`CONTACT`](http://www.wa.me/918157849715)
+[`CONTACT`](http://wa.me/918157849715)
 
 
 [`FOLLOW`](http://www.instagram.com/taurus.efx)
