@@ -1,6 +1,6 @@
 <div align="center">
 
-[𝐂𝐋𝐈𝐂𝐊 𝐌𝐄 💕](wa.me/918157849715)
+[𝐂𝐋𝐈𝐂𝐊 𝐌𝐄 💕](https://github.com/muhammed-usrbot)
 
 
 
